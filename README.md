@@ -1,4 +1,4 @@
-# 🛡️ PQ-BANK: Quantum-Resistant Wallet & Key Management System (Rust)
+# 🛡️ PQ-BANK: Quantum-Resistant Wallet & Key Management System
 
 [![GitHub Stars](https://img.shields.io/github/stars/Sumitchongder/Quantum-Resistant-Module-Lattice-Cryptography?style=social)](https://github.com/Sumitchongder/Quantum-Resistant-Module-Lattice-Cryptography)
 [![Rust](https://img.shields.io/badge/Rust-1.91+-orange.svg)](https://www.rust-lang.org/)
