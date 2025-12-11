@@ -1,0 +1,104 @@
+# ============================================================
+# Rust / Cargo
+# ============================================================
+/target/
+/debug/
+Cargo.lock
+
+# Do NOT ignore Cargo.lock if building a library.
+# Here we ignore because this is an application with many OS-specific deps.
+
+# ============================================================
+# Runtime Storage (ENCRYPTED DATA)
+# ============================================================
+# Prevent accidental uploads of encrypted wallets, server keys,
+# audit logs, crypto blobs, and user files.
+storage/
+*.pqenc
+*.wal
+*.audit
+*.log
+server_keys.json
+
+# ============================================================
+# System / OS Files
+# ============================================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ============================================================
+# IDE / Editor Config
+# ============================================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (CLion, IntelliJ)
+/.idea/
+
+# ============================================================
+# Temporary Files
+# ============================================================
+*.tmp
+*.temp
+*.bak
+*.old
+*.swp
+*.swo
+*.lock
+
+# ============================================================
+# Logs & Dumps
+# ============================================================
+*.log
+*.log.*
+*.trace
+*.dmp
+
+# ============================================================
+# Compiled artefacts (Windows)
+# ============================================================
+*.exe
+*.dll
+*.pdb
+
+# ============================================================
+# eframe / egui cache & local config
+# ============================================================
+.egui/
+eframe_cache/
+ui_state.json
+
+# ============================================================
+# Security — prohibit committing private keys by mistake
+# ============================================================
+# Any private key formats
+*.key
+*.pem
+*.der
+*.p12
+*.asc
+*.enc
+*.secret
+*.priv
+
+# Key dump folders
+keys/
+private/
+secrets/
+
+# ============================================================
+# Backups from Notepad/Editors
+# ============================================================
+*~
+*.orig
+
+# ============================================================
+# Rust Tooling
+# ============================================================
+/rust-toolchain
+/.cargo/
+.cargo/
+
