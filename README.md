@@ -13,20 +13,20 @@
 
 ---
 
-<img width="3302" height="981" alt="Image" src="https://github.com/user-attachments/assets/e3c52b64-0219-4163-84cf-8047381630be" />
+<img width="3104" height="1011" alt="Image" src="https://github.com/user-attachments/assets/c73e858c-1077-4f44-b3d5-7a6dcf20a993" />
 
-<img width="3301" height="1817" alt="Image" src="https://github.com/user-attachments/assets/225851d3-94e4-48ae-b09f-c2e1f53b640d" />
+<img width="3462" height="1826" alt="Image" src="https://github.com/user-attachments/assets/42cfe73d-6dbf-45ed-9ff8-4dd4886a5ad5" />
 
-<img width="3171" height="1739" alt="Image" src="https://github.com/user-attachments/assets/bc58df9f-aa65-4f71-8eb3-5e209823fca9" />
+<img width="3168" height="1340" alt="Image" src="https://github.com/user-attachments/assets/ff77d376-947a-4cca-b8cd-507e0eb6e7e5" />
 
-<img width="3502" height="1555" alt="Image" src="https://github.com/user-attachments/assets/4026547b-fbfb-4321-bfa9-da3099f9cfae" />
+<img width="3421" height="1631" alt="Image" src="https://github.com/user-attachments/assets/687499b7-d71f-4725-a83f-781fab73404a" />
 
 
 ---
 
 ## ✨ Executive summary
 
-**PQ-BANK** is a real-world Rust application demonstrating how to protect banking records, transaction payloads and crypto wallets against future quantum threats using lattice-based PQC (Kyber + Dilithium), AEAD envelopes (XChaCha20-Poly1305) and secure key handling patterns — with a polished GUI and auditability baked in.
+**PQ-BANK** is a real-world Rust application demonstrating how to protect banking records, transaction payloads and crypto wallets against future quantum threats using lattice-based PQC (Kyber + Dilithium), AEAD envelopes (XChaCha20-Poly1305) and secure key handling patterns with a polished GUI and auditability baked in.
 
 ---
 
@@ -58,20 +58,7 @@ Quantum computers pose a threat to common asymmetric cryptography (RSA, ECC). Or
 
 ## Architecture & Components
 
-```
-+-------------------+          TLS / Local TCP         +-------------------+
-|   Client (GUI)    |  <--Kyber KEM / Encapsulate-->   |    Server Thread  |
-|  (eframe/egui)    |  <--KYBER CT, SIGNED PAYLOAD-->  |  (tokio optional)  |
-| - wallet.rs        |                                  | - server_keys.json|
-| - main.rs          |                                  | - /storage/       |
-+-------------------+                                  +-------------------+
-
-Storage layout (runtime):
-./storage/
-  ├─ wallets/        # encrypted wallet JSONs (Argon2id + XChaCha20)
-  ├─ encrypted/      # server encrypted envelopes (.pqenc)
-  └─ audit/          # audit_log.jsonl (signed blocks)
-```
+<img width="1891" height="1375" alt="Image" src="https://github.com/user-attachments/assets/c82da106-5e98-448f-80f1-5f8953e2697c" />
 
 Key flows:
 
@@ -91,6 +78,8 @@ This section explains the primitives, why they were chosen, and how they're appl
 * **PQC** algorithms are designed to resist quantum attacks. NIST standardized several PQC algorithms (Kyber, Dilithium, etc.) after an open competition.
 * PQC is *not* a silver bullet — it requires careful composition and migration planning. This project demonstrates a safe, pragmatic composition pattern.
 
+<img width="1024" height="1024" alt="Image" src="https://github.com/user-attachments/assets/bd802e9f-1396-4142-bc35-ba1948462843" />
+
 ---
 
 ### 2) Lattice-Based Cryptography 
@@ -99,6 +88,8 @@ This section explains the primitives, why they were chosen, and how they're appl
 * **Module-LWE / Module-LWR** (module-lattice) are efficient variants using polynomial structures — they give strong security per key size and are the foundation of Kyber & Dilithium.
 
 **Analogy:** imagine trying to find the smallest indentation in a huge, noisy multi-dimensional mattress — that’s computationally expensive, and quantum computers don’t give an arithmetic shortcut as they do for factoring.
+
+<img width="1024" height="1024" alt="Image" src="https://github.com/user-attachments/assets/e096cf54-4b50-47b0-9fd0-9c3efcd4cc10" />
 
 ---
 
