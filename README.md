@@ -8,7 +8,7 @@
 
 ## A Modern Demonstration of Module-Lattice Cryptography in Rust
 
-> **A production-minded, recruiter-grade demonstration of lattice-based Post-Quantum Cryptography (PQC)** — Kyber KEM for key exchange and Dilithium for signatures — combined with modern symmetric envelopes, secure wallet storage, and a tamper-proof audit chain.
+> **A demonstration of lattice-based Post-Quantum Cryptography (PQC)** — Kyber KEM for key exchange and Dilithium for signatures — combined with modern symmetric envelopes, secure wallet storage, and a tamper-proof audit chain.
 > Built in **Rust** with an `eframe/egui` GUI and a local server thread for realistic workflows.
 
 ---
