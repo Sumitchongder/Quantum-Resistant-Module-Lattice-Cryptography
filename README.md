@@ -306,13 +306,16 @@ A recruiter reading this will want to know you understand the gaps. Suggested ro
 ## FAQ & Troubleshooting
 
 **Q: I see build errors on Windows related to `winapi` or `eframe`**
-A: Make sure `Cargo.toml` pins `eframe = "0.24.1"` and includes a `winapi` override enabling `"winuser"` features (the repo provides a tested `Cargo.toml`). Run `cargo clean` then `cargo build`.
+
+**Ans:** Make sure `Cargo.toml` pins `eframe = "0.24.1"` and includes a `winapi` override enabling `"winuser"` features (the repo provides a tested `Cargo.toml`). Run `cargo clean` then `cargo build`.
 
 **Q: Why store server keys locally?**
-A: This is a demo. In production, use an HSM or KMS.
+
+**Ans:** This is a demo. In production, use an HSM or KMS.
 
 **Q: Is this production ready?**
-A: No — it demonstrates design and implementation patterns. Production requires audits, HSMs, hardened auth and deployment.
+
+**Ans:** No, it demonstrates design and implementation patterns. Production requires audits, HSMs, hardened auth and deployment.
 
 ---
 
