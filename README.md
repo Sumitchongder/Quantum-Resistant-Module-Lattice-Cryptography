@@ -58,7 +58,9 @@ Quantum computers pose a threat to common asymmetric cryptography (RSA, ECC). Or
 
 ## Architecture & Components
 
-<img width="1891" height="1375" alt="Image" src="https://github.com/user-attachments/assets/c82da106-5e98-448f-80f1-5f8953e2697c" />
+<p align="center">
+  <img width="800" height="500" alt="Image" src="https://github.com/user-attachments/assets/c82da106-5e98-448f-80f1-5f8953e2697c" />
+</p>
 
 Key flows:
 
@@ -78,7 +80,9 @@ This section explains the primitives, why they were chosen, and how they're appl
 * **PQC** algorithms are designed to resist quantum attacks. NIST standardized several PQC algorithms (Kyber, Dilithium, etc.) after an open competition.
 * PQC is *not* a silver bullet — it requires careful composition and migration planning. This project demonstrates a safe, pragmatic composition pattern.
 
-<img width="1024" height="1024" alt="Image" src="https://github.com/user-attachments/assets/bd802e9f-1396-4142-bc35-ba1948462843" />
+<p align="center">
+  <img width="700" height="350" alt="Image" src="https://github.com/user-attachments/assets/37f72ca2-7b73-43a4-aff1-cb20e353d713" />
+</p>
 
 ---
 
@@ -89,7 +93,9 @@ This section explains the primitives, why they were chosen, and how they're appl
 
 **Analogy:** imagine trying to find the smallest indentation in a huge, noisy multi-dimensional mattress — that’s computationally expensive, and quantum computers don’t give an arithmetic shortcut as they do for factoring.
 
-<img width="1024" height="1024" alt="Image" src="https://github.com/user-attachments/assets/e096cf54-4b50-47b0-9fd0-9c3efcd4cc10" />
+<p align="center">
+  <img width="700" height="350" alt="Image" src="https://github.com/user-attachments/assets/531834c1-8a08-491a-8ad9-192ee3123dfc" />
+</p>
 
 ---
 
